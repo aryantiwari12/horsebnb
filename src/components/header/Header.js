@@ -9,7 +9,7 @@ import PhoneInput, { formatPhoneNumber, formatPhoneNumberIntl } from 'react-phon
 const Header = () => {
 
     const [value, setValue] = useState()
-   
+
     return (
         <div>
 
@@ -78,15 +78,22 @@ const Header = () => {
                             <input type="text" className='form-control mt-2' placeholder='Last Name'></input>
                             <input type="text" className='form-control mt-2' placeholder='Enter Email'></input>
                             <PhoneInput placeholder="Enter phone number" className='form-control mt-2' value={value} border-0 onChange={setValue}
-                             defaultCountry={value} country="US"
+                                defaultCountry={value} country="US"
                             />
                             <input type="text" className='form-control mt-2' placeholder='Password'></input>
                             <input type="text" className='form-control mt-2' placeholder='Confirm password'></input>
-
+                            <div className='text-start d-flex'>
+                                <input type="checkbox" className='pt-1'></input>
+                                <p className='pt-3 px-2'>Agree To <a href='#'><span className='text-danger'>Term & condition </span></a> </p>
+                            </div>
+                            <button className='w-100 p-2 border-0 text-white rounded' style={{ backgroundColor: "#54BAB9" }} >Sign Up</button>
+                            <p className='mt-3'>or with Continue</p>
+                            <button className='w-100 '>Continue with Facebook</button>
+                            <button className='w-100 mt-2'>Continue with Google</button>
+                            
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                        <p className='mx-auto'>Already have an HorseBnB account ? <span className='text-danger' role="button"> Log In </span></p>
                         </div>
                     </div>
                 </div>
